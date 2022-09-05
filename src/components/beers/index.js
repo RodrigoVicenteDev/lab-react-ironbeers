@@ -59,7 +59,9 @@ function Beers(){
                             <div style={{display:'flex' , flexDirection:'column' ,alignItems: 'flex-start'}}>
                                 <h2>{element.name}</h2>
                                 <h4>{element.tagline}</h4>
+                                <div>
                                 <span style={{fontWeight: 'bolder'}}>Created BY: </span>{element.name}
+                                </div>
                             </div>
                         </div>
                         </>

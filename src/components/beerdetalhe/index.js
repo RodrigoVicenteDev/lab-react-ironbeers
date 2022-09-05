@@ -29,7 +29,7 @@ function Details(){
         fetchBeer()
         setLoading(true)
     },[])
-    
+    console.log(beers)
     return(
         <>
        
