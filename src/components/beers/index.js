@@ -7,6 +7,7 @@ function Beers(){
 
     const [beers , setBeers] = useState([])
     const [loading ,setLoading] = useState(false)
+    const [search, setSearch] = useState('')
 
     useState(()=>{
         
@@ -26,15 +27,29 @@ function Beers(){
         setLoading(true)
     },[])
 
-    console.log(beers)
+    console.log(search)
+    function handleSearch(e){
+        setSearch(e.target.value)
+    }
+
 
     return(
         <>
              <div style={{width: '710px' , margin:"auto"}} >
                   <NavBar/>
+                  <input value={search} onChange={handleSearch} />
                 {loading &&(
+                        
+                 beers
+                   
+                   .filter((element)=>{
+                    return element.name.toLowerCase().includes(search.toLowerCase())
 
-                   beers.map((element)=>{
+                   })
+                   
+                   
+                   
+                   .map((element)=>{
                     return(
                         <>
                         <div style={{display : "flex", borderBottom: '2px gray solid'}}>

@@ -8,7 +8,9 @@ function Details(){
 
     const [beers , setBeers] = useState([])
     const [loading ,setLoading] = useState(false)
+   
     const {id} = useParams()
+    
 
     useState(()=>{
         
@@ -27,8 +29,7 @@ function Details(){
         fetchBeer()
         setLoading(true)
     },[])
-
-
+    
     return(
         <>
        
@@ -37,9 +38,11 @@ function Details(){
              <div style={{width: '710px' , margin:"auto"}} >
                   <NavBar/>
                 {loading &&(
-
+                    
                    
                         <>
+                        
+
                         <div style={{display : "flex", flexDirection:'column', alignItems:'center', borderBottom: '2px gray solid'}}>
                             <img src={beers.image_url} style={{width:"50px", margin:'20px'}} alt='beer'/>
 
